@@ -1,7 +1,15 @@
 'use client'
 
+import { Box } from '@chakra-ui/react'
+
+import { Athlets } from '../components/Athlets'
+
 const SportsPage = () => {
-  return <div>SportsPage</div>
+  return (
+    <Box>
+      <Athlets />
+    </Box>
+  )
 }
 
 export default SportsPage
