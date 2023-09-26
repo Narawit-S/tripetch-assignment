@@ -3,9 +3,12 @@
 import { PropsWithChildren } from 'react'
 import { Box } from '@chakra-ui/react'
 
+import { plusJakartaSans } from '@/styles/fonts'
+
 const FinancialLayout = ({ children }: PropsWithChildren) => {
   return (
     <Box
+      className={plusJakartaSans.className}
       sx={{
         bg: 'var(--ffffff-2-paints, linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), #FFF)',
         color: 'white',
