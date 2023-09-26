@@ -1,10 +1,10 @@
 export const layerStyles = {
   sectionPadding: {
-    pl: '321px',
-    pr: '195px',
+    pl: { base: '30px', xl: '321px' },
+    pr: { base: '30px', xl: '90px', '2xl': '195px' },
   },
   contentRight: {
-    w: '717px',
+    w: { base: '446px', xl: '560px', '2xl': '717px' },
     ml: 'auto',
   },
 }

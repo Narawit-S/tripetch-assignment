@@ -8,11 +8,11 @@ export const Athlets = () => {
     <Box position="relative">
       <AspectRatio
         sx={{
-          w: '678px',
-          h: '950px',
+          w: { base: '498px', lg: '678px' },
+          h: { base: '699px', lg: '950px' },
           position: 'absolute',
-          top: '35px',
-          left: '175px',
+          top: { base: '121px', lg: '35px' },
+          right: { base: '446px', lg: '520px', xl: '710px', '2xl': '1067px' },
         }}
       >
         <Image
@@ -22,7 +22,10 @@ export const Athlets = () => {
           priority
         />
       </AspectRatio>
-      <Box layerStyle="sectionPadding">
+      <Box
+        layerStyle="sectionPadding"
+        sx={{ pt: { base: '40px', lg: 'unset' } }}
+      >
         <Text
           layerStyle="contentRight"
           sx={{
@@ -34,7 +37,13 @@ export const Athlets = () => {
           athlets
         </Text>
       </Box>
-      <Box layerStyle="sectionPadding" sx={{ pt: '59px', pb: '56px' }}>
+      <Box
+        layerStyle="sectionPadding"
+        sx={{
+          pt: { base: '42px', lg: '59px' },
+          pb: { base: '30px', lg: '56px' },
+        }}
+      >
         <Stack layerStyle="contentRight" spacing="21px">
           <HStack spacing="10px">
             <ContentNumber count="01" />
@@ -55,7 +64,11 @@ export const Athlets = () => {
       </Box>
       <Box
         layerStyle="sectionPadding"
-        sx={{ bg: 'gray.100', pt: '53px', pb: '56px' }}
+        sx={{
+          bg: 'gray.100',
+          pt: { base: '30px', lg: '53px' },
+          pb: { base: '30px', lg: '56px' },
+        }}
       >
         <Stack layerStyle="contentRight" spacing="21px">
           <HStack spacing="10px">
@@ -79,7 +92,11 @@ export const Athlets = () => {
       </Box>
       <Box
         layerStyle="sectionPadding"
-        sx={{ bg: 'purple.500', pt: '80px', pb: '98px' }}
+        sx={{
+          bg: 'purple.500',
+          pt: { base: '30px', lg: '80px' },
+          pb: { base: '58px', lg: '98px' },
+        }}
       >
         <Stack layerStyle="contentRight" spacing="21px">
           <HStack spacing="10px">
