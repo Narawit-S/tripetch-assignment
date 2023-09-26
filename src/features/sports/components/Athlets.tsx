@@ -12,6 +12,11 @@ import {
 
 import { ContentNumber } from './ContentNumber'
 
+import {
+  firstContentPadding,
+  secondContentPadding,
+  thirdContentPadding,
+} from '../styles'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -56,13 +61,7 @@ export const Athlets = () => {
           athlets
         </Text>
       </Box>
-      <Box
-        layerStyle="sectionPadding"
-        sx={{
-          pt: { base: '42px', lg: '59px' },
-          pb: { base: '30px', lg: '56px' },
-        }}
-      >
+      <Box layerStyle="sectionPadding" sx={firstContentPadding}>
         <Stack layerStyle="contentRight" spacing="21px">
           <ContentNumber count="01" title="connection" />
           <Text sx={{ fontSize: 'xl' }}>
@@ -70,14 +69,7 @@ export const Athlets = () => {
           </Text>
         </Stack>
       </Box>
-      <Box
-        layerStyle="sectionPadding"
-        sx={{
-          bg: 'purple.100',
-          pt: { base: '30px', lg: '53px' },
-          pb: { base: '30px', lg: '56px' },
-        }}
-      >
+      <Box layerStyle="sectionPadding" sx={secondContentPadding}>
         <Stack layerStyle="contentRight" spacing="21px">
           <ContentNumber count="02" title="collaboration" />
           <Text sx={{ fontSize: 'xl' }}>
@@ -87,14 +79,7 @@ export const Athlets = () => {
           </Text>
         </Stack>
       </Box>
-      <Box
-        layerStyle="sectionPadding"
-        sx={{
-          bg: 'purple.500',
-          pt: { base: '30px', lg: '80px' },
-          pb: { base: '58px', lg: '98px' },
-        }}
-      >
+      <Box layerStyle="sectionPadding" sx={thirdContentPadding}>
         <Stack layerStyle="contentRight" spacing="21px">
           <ContentNumber count="03" underlineColor="white" title="growth" />
           <Text sx={{ color: 'white', fontSize: 'xl' }}>
