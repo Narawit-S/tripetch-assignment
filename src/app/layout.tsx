@@ -11,8 +11,9 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Sport landing page',
-  description: 'Ultimate Destination for Everything Sports',
+  title: 'Tri Petch Assignment - Narawit',
+  description:
+    'Tri Petch Assignment for Front-end Devloper by Narawit Sukwattanajaroon',
 }
 
 export default function RootLayout({
