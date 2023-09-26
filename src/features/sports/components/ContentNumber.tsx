@@ -17,7 +17,11 @@ export const ContentNumber = (props: Props) => {
   return (
     <HStack spacing="10px">
       <VStack spacing={1} sx={{ w: 'fit-content' }}>
-        <Text sx={{ color: textColor, fontSize: 'lg' }}>{count}</Text>
+        <Text
+          sx={{ color: textColor, fontSize: { base: '4.375vw', sm: 'lg' } }}
+        >
+          {count}
+        </Text>
         <Box
           sx={{ borderRadius: 'full', bg: underlineColor, h: '5px', w: 'full' }}
         />
@@ -25,7 +29,7 @@ export const ContentNumber = (props: Props) => {
       <Text
         sx={{
           color: 'gray.300',
-          fontSize: '6xl',
+          fontSize: { base: '8.750vw', sm: '6xl' },
           textTransform: 'uppercase',
         }}
       >

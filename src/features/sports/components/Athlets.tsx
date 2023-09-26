@@ -1,9 +1,28 @@
 import Image from 'next/image'
-import { AspectRatio, Box, HStack, Stack, Text } from '@chakra-ui/react'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from '@chakra-ui/react'
 
 import { ContentNumber } from './ContentNumber'
 
+import 'swiper/css'
+import 'swiper/css/pagination'
+
 export const Athlets = () => {
+  const isMobile = useBreakpointValue({
+    base: true,
+    sm: false,
+  })
+
+  if (isMobile) return <AthletsMobile />
+
   return (
     <Box position="relative">
       <AspectRatio
@@ -54,7 +73,7 @@ export const Athlets = () => {
       <Box
         layerStyle="sectionPadding"
         sx={{
-          bg: 'gray.100',
+          bg: 'purple.100',
           pt: { base: '30px', lg: '53px' },
           pb: { base: '30px', lg: '56px' },
         }}
@@ -85,5 +104,76 @@ export const Athlets = () => {
         </Stack>
       </Box>
     </Box>
+  )
+}
+
+const AthletsMobile = () => {
+  return (
+    <>
+      <Flex sx={{ flexDirection: 'column', px: '5.625vw' }}>
+        <Text
+          sx={{
+            color: 'gray.200',
+            fontSize: '15.625vw',
+            textTransform: 'uppercase',
+          }}
+        >
+          athlets
+        </Text>
+        <AspectRatio
+          ratio={218 / 281}
+          sx={{ alignSelf: 'center', w: '68.125vw', mt: '3.438vw' }}
+        >
+          <Image
+            src="/sports/american-football.svg"
+            alt="american-football-mobile"
+            fill
+            priority
+          />
+        </AspectRatio>
+      </Flex>
+      <Box layerStyle="swiperContainer">
+        <Swiper
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          modules={[Autoplay, Pagination, Navigation]}
+        >
+          <SwiperSlide>
+            <Stack spacing={5}>
+              <ContentNumber count="01" title="connection" />
+              <Text fontSize="4.688vw">
+                Connect with coaches directly, you can ping coaches to view
+                profile.
+              </Text>
+            </Stack>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Stack spacing={5}>
+              <ContentNumber count="02" title="collaboration" />
+              <Text fontSize="4.688vw">
+                Work with other student athletes to increase visability. When
+                you share and like other players videos it will increase your
+                visability as a player. This is the team work aspect to Surface
+                1.
+              </Text>
+            </Stack>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Stack spacing={5}>
+              <ContentNumber count="03" title="growth" />
+              <Text fontSize="4.688vw">
+                Resources and tools for you to get better as a student Athelte.
+                Access to training classes, tutor sessions, etc
+              </Text>
+            </Stack>
+          </SwiperSlide>
+        </Swiper>
+      </Box>
+    </>
   )
 }
