@@ -2,12 +2,13 @@
 
 import { Box } from '@chakra-ui/react'
 
-import { Athlets } from '../components/Athlets'
+import { Athlets, Players } from '../components'
 
 const SportsPage = () => {
   return (
     <Box>
       <Athlets />
+      <Players />
     </Box>
   )
 }
