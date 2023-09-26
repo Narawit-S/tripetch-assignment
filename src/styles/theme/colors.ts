@@ -5,6 +5,7 @@ export const colors = {
   },
   purple: {
     100: '#F5F4F9',
+    200: '#B6B3EB',
     400: '#603EBE',
     500: '#5E3DB3',
     600: '#8F6BE8',
