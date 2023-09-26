@@ -45,18 +45,7 @@ export const Athlets = () => {
         }}
       >
         <Stack layerStyle="contentRight" spacing="21px">
-          <HStack spacing="10px">
-            <ContentNumber count="01" />
-            <Text
-              sx={{
-                color: 'gray.300',
-                fontSize: '6xl',
-                textTransform: 'uppercase',
-              }}
-            >
-              connection
-            </Text>
-          </HStack>
+          <ContentNumber count="01" title="connection" />
           <Text sx={{ fontSize: 'xl' }}>
             Connect with coaches directly, you can ping coaches to view profile.
           </Text>
@@ -71,18 +60,7 @@ export const Athlets = () => {
         }}
       >
         <Stack layerStyle="contentRight" spacing="21px">
-          <HStack spacing="10px">
-            <ContentNumber count="02" />
-            <Text
-              sx={{
-                color: 'gray.300',
-                fontSize: '6xl',
-                textTransform: 'uppercase',
-              }}
-            >
-              collaboration
-            </Text>
-          </HStack>
+          <ContentNumber count="02" title="collaboration" />
           <Text sx={{ fontSize: 'xl' }}>
             Work with other student athletes to increase visability. When you
             share and like other players videos it will increase your visability
@@ -99,18 +77,7 @@ export const Athlets = () => {
         }}
       >
         <Stack layerStyle="contentRight" spacing="21px">
-          <HStack spacing="10px">
-            <ContentNumber count="03" underlineColor="white" />
-            <Text
-              sx={{
-                color: 'gray.300',
-                fontSize: '6xl',
-                textTransform: 'uppercase',
-              }}
-            >
-              growth
-            </Text>
-          </HStack>
+          <ContentNumber count="03" underlineColor="white" title="growth" />
           <Text sx={{ color: 'white', fontSize: 'xl' }}>
             Resources and tools for you to get better as a student Athelte.
             Access to training classes, tutor sessions, etc
