@@ -38,13 +38,16 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
         <Flex sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
           <Text
             className={poppins.className}
-            sx={{ fontSize: { base: 'xl', xl: '3xl' }, fontWeight: 'semibold' }}
+            sx={{
+              fontSize: { base: '4.651vw', md: 'xl', llg: '3xl' },
+              fontWeight: 'semibold',
+            }}
           >
             LegacyLine.
           </Text>
           {isMobile ? (
             <Burger
-              boxSize="24px"
+              boxSize="5.581vw"
               cursor="pointer"
               onClick={menuDisclosure.onOpen}
             />
@@ -52,7 +55,7 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
             <HStack
               spacing={8}
               color="purple.200"
-              sx={{ color: 'purple.200', fontSize: { base: 'sm', xl: 'md' } }}
+              sx={{ color: 'purple.200', fontSize: { base: 'sm', llg: 'md' } }}
             >
               <Link href="#home" color="white">
                 Home
@@ -66,8 +69,8 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
                   bg: '#FFFFFF10',
                   color: 'white',
                   fontWeight: 'medium',
-                  h: { base: '36px', xl: '44px' },
-                  w: { base: '91px', xl: '107px' },
+                  h: { base: '36px', llg: '44px' },
+                  w: { base: '91px', llg: '107px' },
                   _hover: {
                     bg: '#FFFFFF20',
                   },
