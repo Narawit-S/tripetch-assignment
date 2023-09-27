@@ -78,7 +78,7 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
             </HStack>
           )}
         </Flex>
-        <Box mt={{ base: '85px' }}>{children}</Box>
+        <Box mt={{ base: '8.140vw', md: '85px' }}>{children}</Box>
       </Box>
       {isMobile && <Drawer disclosure={menuDisclosure} />}
     </Box>

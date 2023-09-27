@@ -8,11 +8,11 @@ export const buttonStyle: SystemStyleObject = {
 }
 
 export const stateTitle: SystemStyleObject = {
-  fontSize: { base: '3xl', llg: '5xl' },
+  fontSize: { base: '4.651vw', md: '3xl', llg: '5xl' },
   fontWeight: 'semibold',
 }
 
 export const stateDesc: SystemStyleObject = {
   color: 'purple.200',
-  fontSize: { base: 'xs', llg: 'md' },
+  fontSize: { base: '2.791vw', md: 'xs', llg: 'md' },
 }
