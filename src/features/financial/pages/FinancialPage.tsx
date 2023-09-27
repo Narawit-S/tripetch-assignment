@@ -32,7 +32,7 @@ const FinancialPage = () => {
             maxW: { base: '412px', llg: '586px' },
           }}
         >
-          Welcome to our bank's website, where we provide secure financial
+          Welcome to our bank&apos;s website, where we provide secure financial
           solutions tailored to meet your unique needs.
         </Text>
         <HStack spacing={{ base: '13px', llg: '32px' }}>
