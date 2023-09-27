@@ -1,14 +1,7 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 
 import { ChakraProvider } from '@/styles/provider'
-
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+import { roboto } from '@/styles/fonts'
 
 export const metadata: Metadata = {
   title: 'Tri Petch Assignment - Narawit',
