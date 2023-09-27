@@ -8,18 +8,21 @@ import {
   HStack,
   Text,
   Link,
+  useDisclosure,
   useBreakpointValue,
 } from '@chakra-ui/react'
 
 import { plusJakartaSans, poppins } from '@/styles/fonts'
 
 import { Burger } from '@/icons'
+import { Drawer } from '../components'
 
 const FinancialLayout = ({ children }: PropsWithChildren) => {
   const isMobile = useBreakpointValue({
     base: true,
     md: false,
   })
+  const menuDisclosure = useDisclosure()
 
   return (
     <Box
@@ -28,7 +31,7 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
         bg: 'var(--ffffff-2-paints, linear-gradient(65deg, #362FCC 31.84%, #5D55FF 68.16%), #FFF)',
         color: 'white',
         minH: '100vh',
-        px: 9,
+        px: { base: 6, sm: 9 },
       }}
     >
       <Box sx={{ maxW: '1408px', margin: '0 auto', pt: 9 }}>
@@ -40,7 +43,11 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
             LegacyLine.
           </Text>
           {isMobile ? (
-            <Burger boxSize="24px" cursor="pointer" />
+            <Burger
+              boxSize="24px"
+              cursor="pointer"
+              onClick={menuDisclosure.onOpen}
+            />
           ) : (
             <HStack
               spacing={8}
@@ -73,6 +80,7 @@ const FinancialLayout = ({ children }: PropsWithChildren) => {
         </Flex>
         <Box mt={{ base: '85px' }}>{children}</Box>
       </Box>
+      {isMobile && <Drawer disclosure={menuDisclosure} />}
     </Box>
   )
 }
